@@ -29,7 +29,7 @@ async def forces_sub(client, message):
 Before we can have fun, you gotta join my awesome channel first! 
 
 Pretty please, don’t keep me waiting~ 💖</b>"""
-    await message.reply_text(text, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="html")
+    await message.reply_text(text, reply_markup=InlineKeyboardMarkup(buttons), parse_mode="HTML")
     try:
         user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)    
         if user.status == enums.ChatMemberStatus.BANNED:                                   
