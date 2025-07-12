@@ -12,6 +12,12 @@ import pyromod
 pyrogram.utils.MIN_CHAT_ID = -999999999999
 pyrogram.utils.MIN_CHANNEL_ID = -1009999999999
 
+await app.send_document(
+    chat_id,
+    document=message.document.file_id,
+    file_name="NewName.mp4",
+    caption="Renamed!"
+)
 
 class Bot(Client):
 
