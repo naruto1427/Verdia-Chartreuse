@@ -212,10 +212,3 @@ async def doc(bot, update):
         os.remove(ph_path)
     if file_path:
         os.remove(file_path)
-
-    await asyncio.sleep(1800)
-    try:
-        await sent_message.delete()
-        await deletion_msg.delete()
-    except Exception as e:
-        print(f"Error deleting messages after 30 minutes: {e}")
