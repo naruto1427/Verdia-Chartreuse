@@ -197,9 +197,6 @@ async def doc(bot, update):
     message_id=sent_message.id                # Which message to copy
         )
 
-        deletion_msg = await sent_message.reply(
-            text="**🗑 Mmh~ This file’s just teasing you for 30 minutes... Save me before I disappear, okay~?**",
-        )
 
     except Exception as e:          
         os.remove(file_path)
