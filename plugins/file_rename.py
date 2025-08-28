@@ -11,7 +11,8 @@ from asyncio import sleep
 from PIL import Image
 from config import Config
 import os, time, re, random, asyncio
-
+from pymediainfo import MediaInfo
+from telegraph import Telegraph
 
 @Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
 async def rename_start(client, message):
