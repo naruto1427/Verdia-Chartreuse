@@ -27,10 +27,19 @@ async def rename_start(client, message):
 
     try:
         await message.reply_text(
-            text=f"**Hey~ Give me a new name for your file, darling...**\n\n**Old File Name** :- `{filename}`",
-            reply_to_message_id=message.id,  
-            reply_markup=ForceReply(True)
-        )       
+            buttons = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton("📑 MediaExtract", callback_data=f"mediainfo:{message.id}"),
+            InlineKeyboardButton("✏️ Rename", callback_data=f"rename:{message.id}")
+        ]
+    ]
+)
+
+await message.reply_text(
+    f"📂 Old File Name :- `{old_filename}`",
+    reply_markup=buttons
+)
         await sleep(30)
     except FloodWait as e:
         await sleep(e.value)
