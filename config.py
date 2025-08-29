@@ -4,7 +4,7 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
+    API_ID    = os.environ.get("API_ID", "20167916")
     API_HASH  = os.environ.get("API_HASH", "325de70c258003ff1c30fb02077dde25")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "8179013795:AAH2jjrdY8pKEqVAOXA7pBADP4L3opn8Dik") 
    
@@ -19,11 +19,11 @@ class Config(object):
 
     # channels logs
     FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002585613766"))
     BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL", " -1002585613766"))
 
     # wes response configuration     
-    WEBHOOK = bool(os.environ.get("WEBHOOK", True))
+    WEBHOOK = bool(os.environ.get("WEBHOOK", False))
 
 
 
