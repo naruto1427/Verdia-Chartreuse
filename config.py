@@ -6,11 +6,11 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "20167916")
     API_HASH  = os.environ.get("API_HASH", "325de70c258003ff1c30fb02077dde25")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")  
+    BOT_TOKEN = os.environ.get("BOT_TOKEN","7898354674:AAGct8JuDQqhIcL4R6e01EyGmSmviHyPIaI")  
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","rename")     
-    DB_URL  = os.environ.get("DB_URL")
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://naruto1:naruto1@cluster0.w6bp0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
     # other configs
     BOT_UPTIME  = time.time()
